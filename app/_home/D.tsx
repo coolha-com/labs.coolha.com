@@ -42,7 +42,7 @@ export default function page() {
                             {t('我们来自用户，既是构建者，也是拥有者')}
                         </p> */}
                         <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
-                            {t('Coolha / 酷哈网络科技工作室注册主体在中国，遵守当地法律制度及不同地区的法律制度，为探索Web3行业合规性')}
+                            {t('Coolha / 酷哈工作室')}
                             <br />
                             {t('希望探索出向共产主义前进的技术，通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好')}
                             <br />

@@ -24,7 +24,7 @@ export default function Home() {
           <div className="max-w-4xl ">
             <h1 className="text-4xl md:text-7xl font-bold text-white">
               <span className="text-[#C0E218]">Coolha </span></h1>
-            <h1 className="my-4 text-xl sm:text-2xl font-bold text-white">{t('酷哈网络科技工作室')}</h1>
+            <h1 className="my-4 text-xl sm:text-2xl font-bold text-white">{t('酷哈工作室')}</h1>
             <p className="px-2 mb-5 text-white text-xl md:text-2xl">{t('让数据信息可拥有、可信任、有价值，构建')} <b className="">{t('理想的Web3')}</b></p>
 
 
