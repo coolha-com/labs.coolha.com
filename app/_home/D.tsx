@@ -48,6 +48,7 @@ export default function page() {
                             <br />
                             {t('相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念')}
                             <br />
+                            {t('公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术。')}
                         </p>
                     </div>
 
@@ -73,7 +74,7 @@ export default function page() {
                         <Link
                             role="button"
                             className="  btn btn-primary   hover:text-[#3f1de7] text-xl  font-bold rounded-full "
-                            href={'mailto:hr@coolha.com'}
+                            href={'mailto:email@coolha.com'}
                             target='_blank'
                         >
                             {t('加入我们')} ↗

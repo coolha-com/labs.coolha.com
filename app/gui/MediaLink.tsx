@@ -45,7 +45,7 @@ export default function MediaLink() {
       </motion.div> */}
 
       <motion.div whileHover={{ scale: 1.2 }} >
-        <Link href="mailto:cs@coolha.com" target='_blank' >
+        <Link href="mailto:email@coolha.com" target='_blank' >
           <RiMailFill  className="w-8 h-8" />
         </Link >
       </motion.div>

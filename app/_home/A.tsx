@@ -18,20 +18,8 @@ export default function Example() {
       title: 'Qiancset',
     },
     {
-      href: '/products/#教培',
-      title: t('教培'),
-    },
-    {
-      href: '/products/#咨询',
-      title: t('咨询'),
-    },
-    {
       href: '/products/#开发',
       title: t('开发'),
-    },
-    {
-      href: '/products/#电商',
-      title: t('电商'),
     },
     {
       href: '/products/#市场',
@@ -45,10 +33,6 @@ export default function Example() {
       href: '/products/#策划',
       title: t('策划'),
     },
-    {
-      href: '/products/#设计',
-      title: t('设计'),
-    }
   ]
   return (
     <div className="bg-[base-100] py-24 sm:py-32 ">
@@ -88,20 +72,16 @@ export default function Example() {
 
 
         <div className=" md:grid grid-cols-2 gap-8 flex sm:flex-row flex-col  mt-12">
-          <Cord logo={<RiGraduationCapLine />}  name={t('教培')} text={t('学习行业理论知识，提供入门问题解答，工具使用，技术学习推荐，空投产品交互指导。')} />
-          <Cord logo={<RiQuestionAnswerLine />}  name={t('咨询')} text={t('行业交流,技术应用探索,商业模式研究')} />
 
-          <Cord logo={<RiCodeBoxLine />}  name={t('开发')} text={t('DAPP、前端网站、EVM智能合约solidify、UI/UX设计、产品架构，区块链应用技术')} />
-          <Cord logo={<RiShoppingBag4Line  />}  name={t('电商')} text={t('抖音电商，购买你喜欢的商品或服务')} />
+          <Cord logo={<RiCodeBoxLine />} name={t('开发')} text={t('DAPP、前端网站、EVM智能合约solidify、UI/UX设计、产品架构，区块链应用技术')} />
 
-          <Cord logo={<RiBarChart2Line />}  name={t('市场')} text={t('市场研究报告,数据分析,技术研究文章等')} />
-          <Cord logo={<RiLineChartLine />}  name={t('营销')} text={t('广告流量,NFT营销方案等技术,为创作者和企业提供创收方案')} />
+          <Cord logo={<RiBarChart2Line />} name={t('市场')} text={t('市场研究报告,数据分析,技术研究文章等')} />
+          <Cord logo={<RiLineChartLine />} name={t('营销')} text={t('广告流量,NFT营销方案等技术,为创作者和企业提供创收方案')} />
 
-          <Cord logo={<RiListCheck3 />}  name={t('策划')} text={t('Web3商业模式研究，为您提供市场研究、营销策划方案、内容创意、品牌策划、企业形象设计等')} />
-          <Cord logo={<RiShapeFill />}  name={t('设计')} text={t('logo标志、广告图、海报图、插画图、产品外包装、名片、贺卡、邀请函等，数字产品UX/UI设计')} />
+          <Cord logo={<RiListCheck3 />} name={t('策划')} text={t('Web3商业模式研究，为您提供市场研究、营销策划方案、内容创意、品牌策划、企业形象设计等')} />
         </div>
 
-        <div className="text-xl font-semibold leading-7 text-info text-center py-12">        <Link role="button" className="btn btn-primary   hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full " href={'mailto:cs@coolha.com'}>{t('联系我们')} ↗</Link></div>
+        <div className="text-xl font-semibold leading-7 text-info text-center py-12">        <Link role="button" className="btn btn-primary   hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full " href={'mailto:email@coolha.com'}>{t('联系我们')} ↗</Link></div>
 
 
 

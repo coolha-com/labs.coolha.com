@@ -26,14 +26,10 @@ export default function Footer() {
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('服务')}</h6>
-                        <Link href="/#教培" className="link link-hover">{t('教学培训')}</Link >
-                        <Link href="/#咨询" className="link link-hover">{t('信息咨询')}</Link >
                         <Link href="/#开发" className="link link-hover">{t('开发软件')}</Link >
-                        <Link href="/#电商" className="link link-hover">{t('抖音电商')}</Link >
                         <Link href="/#市场" className="link link-hover">{t('市场研究')}</Link >
                         <Link href="/#营销" className="link link-hover">{t('营销服务')}</Link >
                         <Link href="/#策划" className="link link-hover">{t('策划方案')}</Link >
-                        <Link href="/#设计" className="link link-hover">{t('设计创意')}</Link >
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('关于')}</h6>

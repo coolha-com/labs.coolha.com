@@ -32,7 +32,7 @@ export default function Home() {
               <Link
                 role="button"
                 className="btn btn-primary   hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full "
-                href={'mailto:cs@coolha.com'}
+                href={'mailto:email@coolha.com'}
                 target='_blank' >
                 {t('联系我们')} ↗
               </Link>
