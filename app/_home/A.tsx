@@ -10,8 +10,8 @@ export default function Example() {
   const t = useTranslations();
   const people = [
     {
-      href: '/products/#coolha.top',
-      title: 'coolha.top',
+      href: '/products/#coolha.com',
+      title: 'coolha.com',
     },
     {
       href: '/products/#Qiancset',
@@ -46,13 +46,13 @@ export default function Example() {
 
         <div className=" flex justify-evenly items-center md:flex-row flex-col  gap-8">
 
-          <div id='coolha.top' className="card card-compact bg-base-100 shadow-xl border w-full max-w-96 h-auto mt-4">
+          <div id='coolha.com' className="card card-compact bg-base-100 shadow-xl border w-full max-w-96 h-auto mt-4">
             <figure><img src='/img/coolhatop.png' alt='coolhatop' className=" w-full h-auto" /></figure>
             <div className="card-body border-t ">
-              <h2 className="card-title">coolha.top</h2>
+              <h2 className="card-title">coolha.com</h2>
               <p>{t('基于Lens协议开发的去中心化社交应用')}, {t('开发中仅测试用')}</p>
               <div className="card-actions justify-end">
-                <Link href='https://coolha.top' className="btn btn-primary hover:text-secondary text-lg" target='_blank'>{t('前往')}↗</Link>
+                <Link href='https://coolha.com' className="btn btn-primary hover:text-secondary text-lg" target='_blank'>{t('前往')}↗</Link>
               </div>
             </div>
           </div>

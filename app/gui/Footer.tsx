@@ -22,7 +22,7 @@ export default function Footer() {
 
                     <nav>
                         <h6 className="footer-title">{t('产品')}</h6>
-                        <Link href="https://coolha.top" className="link link-hover" target='_blank'>coolha.top↗</Link >
+                        <Link href="https://coolha.com" className="link link-hover" target='_blank'>coolha.com↗</Link >
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('服务')}</h6>
