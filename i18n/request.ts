@@ -15,8 +15,8 @@ export default getRequestConfig(async () => {
   const userLanguages = negotiator.languages();
 
   // 定义支持的区域设置
-  const supportedLocales = ['zh', 'en'];
-  const defaultLocale = 'zh';
+  const supportedLocales = ['en', 'zh'];
+  const defaultLocale = 'en';
 
   // 如果 cookies 中有用户首选语言，优先使用
   const locale = userLocaleFromCookies || match(userLanguages, supportedLocales, defaultLocale);
