@@ -47,7 +47,7 @@ export default function Example() {
         <div className=" flex justify-evenly items-center md:flex-row flex-col  gap-8">
 
           <div id='coolha.com' className="card card-compact bg-base-100 shadow-xl border w-full max-w-96 h-auto mt-4">
-            <figure><img src='/img/coolhatop.png' alt='coolhatop' className=" w-full h-auto" /></figure>
+            <figure><img src='/img/coolhacom.png' alt='coolhatop' className=" w-full h-auto" /></figure>
             <div className="card-body border-t ">
               <h2 className="card-title">coolha.com</h2>
               <p>{t('基于Lens协议开发的去中心化社交应用')}, {t('开发中仅测试用')}</p>
@@ -81,7 +81,7 @@ export default function Example() {
           <Cord logo={<RiListCheck3 />} name={t('策划')} text={t('Web3商业模式研究，为您提供市场研究、营销策划方案、内容创意、品牌策划、企业形象设计等')} />
         </div>
 
-        <div className="text-xl font-semibold leading-7 text-info text-center py-12">        <Link role="button" className="btn btn-primary   hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full " href={'mailto:email@coolha.com'}>{t('联系我们')} ↗</Link></div>
+ 
 
 
 

@@ -55,7 +55,7 @@ export default function LocaleModal() {
             </button>
 
             {/* 模态框 */}
-            <dialog id="my_modal_2" className="modal">
+            <dialog id="my_modal_2" className="modal border">
                 <div className="modal-box">
                     <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>

@@ -33,8 +33,11 @@ export default function Footer() {
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('关于')}</h6>
-                        {/* <Link href="https://Coolhanet.feishu.cn/share/base/form/shrcnKgHyUU905ToaA3BzzW5ZMd" className="link link-hover" target='_blank'>{t('联系我们')}↗</Link >
-                        <Link href="https://Coolhanet.feishu.cn/docx/NOEUdkurRohsFGxscUQcMQAznSh?from=from_copylink" className="link link-hover" target='_blank'>{t('加入我们')}↗</Link > */}
+                        <Link href="mailto:cs@coolha.com" className="link link-hover" target='_blank'>{t('联系我们')}</Link >
+                        <Link href="mailto:ceo@coolha.com" className="link link-hover" target='_blank'>{t('加入我们')}</Link >
+                        <Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" className="link link-hover">{t('博客')}↗</Link >
+                        <Link href="https://guild.xyz/coolha" className="link link-hover">{t('公会')}↗</Link >
+                        <Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" className="link link-hover">{t('DAO')}↗</Link >
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('法律')}</h6>
@@ -49,16 +52,6 @@ export default function Footer() {
                 <div className=" footer max-w-screen-xl px-6 lg:px-8 py-4">
                     <div className="place-self-start md:place-self-center text-gray-400 flex flex-col md:flex-row gap-2">
                         <p className="flex flex-col gap-1 md:flex-row"><span> © 2024 coolha.com All rights reserved.</span></p>
-
-                        {/* <a href="https://beian.miit.gov.cn/" className="link link-hover flex flex-row gap-1" target='_blank'>
-                            <img src='/工业和信息化部政务服务平台.png' alt='/工业和信息化部政务服务平台.png' className="w-4 h-4" />
-                            {t('桂ICP备')}
-                        </a> */}
-
-                        {/*                         <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=**********" className="link link-hover gap-1 flex flex-row" target='_blank'>
-                            <img src="/全国互联网安全管理服务平台.png" alt="全国互联网安全管理服务平台.png" className=" w-4 h-4" />
-                            桂公安备********号
-                        </a> */}
                     </div>
 
                 </div>

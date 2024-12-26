@@ -37,7 +37,7 @@ export default function Example() {
 
         <h1 className="text-xl text-center font-semibold leading-7 text-info">{t('案例场景')}</h1>
 
-        <p className="text-2xl text-center font-semibold my-2">{t('为创作者和品牌赋能，数字增长新动力，Web3世界的营销服务')}</p>
+        <p className="text-2xl text-center font-semibold my-2">{t('为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务')}</p>
         <div className="mx-auto max-w-2xl sm:mt-20 md:max-w-4xl">
           <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
             {features.map((feature) => (
@@ -55,7 +55,27 @@ export default function Example() {
         </div>
 
 
+        <section className="py-20">
+        <div className=" mx-auto px-4">
+          <h3 className="text-3xl font-bold text-center  mb-12">{t('为什么选择')} coolha.com?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
+            <div className="bg-[#111111] p-6 rounded-lg border hover:border-primary ">
+              <h4 className="text-xl font-semibold mb-2">{t('去中心化身份')}</h4>
+              <p className="text-white">{t('使用区块链技术拥有和控制您的数字身份')}</p>
+            </div>
+            <div className="bg-[#111111] p-6 rounded-lg border hover:border-primary ">
+              <h4 className="text-xl font-semibold  mb-2">{t('安全消息传递')}</h4>
+              <p className="text-white">{t('使用 XMTP 构建安全、私密和可移植的消息传递')}</p>
+            </div>
+            <div className="bg-[#111111] p-6 rounded-lg border hover:border-primary ">
+              <h4 className="text-xl font-semibold  mb-2">{t('去中心化治理')}</h4>
+              <p className=" text-white">{t('用户参与共同治理,不要因为中心组织过度控制而丧失活力')}</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
 
 

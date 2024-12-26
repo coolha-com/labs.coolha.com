@@ -44,7 +44,7 @@ export default function page() {
                         <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
                             {t('Coolha / 酷哈工作室')}
                             <br />
-                            {t('希望探索出向共产主义前进的技术，通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好')}
+                            {t('希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好')}
                             <br />
                             {t('相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念')}
                             <br />
@@ -74,7 +74,7 @@ export default function page() {
                         <Link
                             role="button"
                             className="  btn btn-primary   hover:text-[#3f1de7] text-xl  font-bold rounded-full "
-                            href={'mailto:email@coolha.com'}
+                            href={'mailto:ceo@coolha.com'}
                             target='_blank'
                         >
                             {t('加入我们')} ↗

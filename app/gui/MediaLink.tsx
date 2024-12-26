@@ -68,23 +68,24 @@ export default function MediaLink() {
       </motion.div>
 
       <motion.div whileHover={{ scale: 1.2 }} >
-        <Link href="mailto:email@coolha.com" target='_blank' >
+        <Link href="mailto:cs@coolha.com" target='_blank' >
           <RiMailFill className="w-8 h-8" />
         </Link >
       </motion.div>
-
-{/*       <motion.div whileHover={{ scale: 1.2 }} >
+{/* 
+      <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://mirror.xyz/0xf3d7de68985ab5e92841ce7bc335cfe0c04cab4a" target='_blank' >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="duration-300 shrink-0" ><path d="M5.5 10.5C5.5 6.91015 8.41015 4 12 4C15.5899 4 18.5 6.91015 18.5 10.5V20H5.5V10.5Z"></path></svg>
         </Link >
-      </motion.div> */}
+      </motion.div>
 
-      {/*       <motion.div whileHover={{ scale: 1.2 }} >
-        <Link href="https://www.tiktok.com/@coolha_com" target='_blank' >
-          <FaTiktok className="w-8 h-8" />
+      <motion.div whileHover={{ scale: 1.2 }} >
+        <Link href="https://mirror.xyz/0xf3d7de68985ab5e92841ce7bc335cfe0c04cab4a" target='_blank' >
+          <svg width="32" height="32" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M571.429 71.4286H428.571V0H571.429V71.4286ZM571.429 142.857V71.4286L642.857 71.4286V142.857H571.429ZM642.857 428.571L714.286 428.571V500H785.714V571.429H857.143V642.857H928.571V500H1000V1000H642.857V642.857H571.429V571.429H428.571V642.857L357.143 642.857V1000H0V500H71.4286V642.857H142.857V571.429H214.286V500H285.714V428.571H357.143V214.286L428.571 214.286V142.857H571.429V214.286L642.857 214.286L642.857 428.571ZM428.571 142.857V71.4286L357.143 71.4286V142.857H428.571ZM785.714 785.714V857.143H857.143V785.714H785.714ZM142.857 785.714V857.143H214.286V785.714H142.857Z" fill="white" />
+          </svg>
         </Link >
       </motion.div> */}
-
 
 
     </>
