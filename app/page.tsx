@@ -1,11 +1,8 @@
 'use client'
 import Link from 'next/link';
 import Image from "next/image";
-import A from "./_home/A";
 import B from "./_home/B";
 import C from "./_home/C";
-import D from "./_home/D";
-import E from "./_home/E";
 import F from './_home/F';
 import { useTranslations } from 'next-intl';
 
@@ -24,8 +21,7 @@ export default function Home() {
           <div className="max-w-4xl ">
             <h1 className="text-4xl md:text-7xl font-bold text-white">
               <span className="text-[#C0E218]">Coolha </span></h1>
-            <h1 className="my-4 text-xl sm:text-2xl font-bold text-white">{t('酷哈工作室')}</h1>
-            <p className="px-2 mb-5 text-white text-xl md:text-2xl">{t('让数据信息可拥有、可信任、有价值，构建')} <b className="">{t('理想的Web3')}</b></p>
+            <p className="p-2 mb-5 text-white text-xl md:text-2xl">{t('为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务')} </p>
 
 
             <div className='mt-5 self-center flex gap-2 w-full sm:w-auto flex-col sm:flex-row justify-center px-12'>
@@ -34,11 +30,11 @@ export default function Home() {
                 className="btn btn-primary   hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full "
                 href={'mailto:cs@coolha.com'}
                 target='_blank' >
-                {t('联系我们')} ↗
+                {t('前往应用')} ↗
               </Link>
               <Link
                 role="button"
-                className="btn btn-primary  btn-outline  text-base-100 hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full" href={'#about'}>
+                className="btn btn-primary  btn-outline  text-base-100 hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full" href={'/about_us'}>
                 {t('关于我们')} →
               </Link>
             </div>
@@ -56,11 +52,8 @@ export default function Home() {
 
 
 
-      <A />
       <B />
       <C />
-      <D />
-      {/* <E /> */}
       {/* <F /> */}
 
 
