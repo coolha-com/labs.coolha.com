@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 import LocaleModal from "@/app/gui/LocaleSwap";
+import { useState, useEffect } from "react";
 export default function Header() {
     const pathname = usePathname();
     const { theme, setTheme } = useTheme();
@@ -29,34 +30,7 @@ export default function Header() {
                 <div className="navbar-center hidden md:flex">{/* 中 */}
                     <ul className="menu menu-horizontal px-1 gap-4">
                         <li><LinkNavbar href='/' Name={t('首页')} /></li>
-                        <li><details className=" text-lg">
-                            <summary>{t('业务')}</summary>
-                            <ul className=" w-32 lg:w-56 border">
-                                <li><Link href="/#开发" >{t('开发软件')}</Link ></li>
-                                <li><Link href="/#市场" >{t('市场研究')}</Link ></li>
-                                <li><Link href="/#营销" >{t('营销服务')}</Link ></li>
-                                <li><Link href="/#策划" >{t('策划方案')}</Link ></li>
-                            </ul>
-                        </details></li>
-                        <li><details className=" text-lg">
-                            <summary>{t('关于')}</summary>
-                            <ul className=" w-32 lg:w-56 border">
-                                <li><Link href="mailto:cs@coolha.com" >{t('联系我们')}</Link ></li>
-                                <li><Link href="mailto:ceo@coolha.com" >{t('加入我们')}</Link ></li>
-                                <li><Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" >{t('博客')}↗</Link ></li>
-                                <li><Link href="https://guild.xyz/coolha" >{t('公会')}↗</Link ></li>
-                                <li><Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" >{t('DAO')}↗</Link ></li>
-                            </ul>
-                        </details></li>
-                        <li> <details className=" text-lg">
-                            <summary>{t('法律')}</summary>
-                            <ul className=" w-32 lg:w-56 border">
-                                <li><Link href="/br" >{t('品牌资产')}</Link ></li>
-                                <li><Link href="/ipr" >{t('知识产权')}</Link ></li>
-                                <li><Link href="/privacy" >{t('隐私策略')}</Link ></li>
-                                <li><Link href="/terms" >{t('使用条款')}</Link ></li>
-                            </ul>
-                        </details> </li>
+                        <LinkMenu />
                     </ul>
                 </div>
 
@@ -74,34 +48,7 @@ export default function Header() {
 
                             <ul tabIndex={1} className="dropdown-content menu bg-base-100 rounded-box border gap-2 z-[1] min-w-72 max-w-96 p-2 shadow">
                                 <li><LinkNavbar href='/' Name={t('首页')} /></li>
-                                <li><details className=" text-lg">
-                                    <summary>{t('业务')}</summary>
-                                    <ul className=" w-52 ">
-                                        <li><Link href="/#开发" >{t('开发软件')}</Link ></li>
-                                        <li><Link href="/#市场" >{t('市场研究')}</Link ></li>
-                                        <li><Link href="/#营销" >{t('营销服务')}</Link ></li>
-                                        <li><Link href="/#策划" >{t('策划方案')}</Link ></li>
-                                    </ul>
-                                </details></li>
-                                <li><details className=" text-lg">
-                                    <summary>{t('关于')}</summary>
-                                    <ul className=" w-52 ">
-                                        <li><Link href="mailto:cs@coolha.com" >{t('联系我们')}</Link ></li>
-                                        <li><Link href="mailto:ceo@coolha.com" >{t('加入我们')}</Link ></li>
-                                        <li><Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" >{t('博客')}↗</Link ></li>
-                                        <li><Link href="https://guild.xyz/coolha" >{t('公会')}↗</Link ></li>
-                                        <li><Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" >{t('DAO')}↗</Link ></li>
-                                    </ul>
-                                </details></li>
-                                <li>  <details className=" text-lg">
-                                    <summary>{t('法律')}</summary>
-                                    <ul className=" w-52 ">
-                                        <li><Link href="/br" >{t('品牌资产')}</Link ></li>
-                                        <li><Link href="/ipr" >{t('知识产权')}</Link ></li>
-                                        <li><Link href="/privacy" >{t('隐私策略')}</Link ></li>
-                                        <li><Link href="/terms" >{t('使用条款')}</Link ></li>
-                                    </ul>
-                                </details></li>
+                                <LinkMenu />
                             </ul>
                         </div>
                     </div>
@@ -121,4 +68,89 @@ function LinkNavbar({ href, Name }: any) {
             {Name}
         </Link>
     )
+}
+
+
+function LinkMenu() {
+    const t = useTranslations();
+    const [isMdScreen, setIsMdScreen] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(min-width: 768px)");
+        const handleResize = () => setIsMdScreen(mediaQuery.matches);
+
+        // 初始化时检查屏幕大小
+        handleResize();
+
+        // 添加监听器
+        mediaQuery.addEventListener("change", handleResize);
+        return () => mediaQuery.removeEventListener("change", handleResize);
+    }, []);
+
+    const handleMouseEnter = (event: React.MouseEvent<HTMLDetailsElement>) => {
+        if (isMdScreen) {
+            event.currentTarget.setAttribute("open", "true");
+        }
+    };
+
+    const handleMouseLeave = (event: React.MouseEvent<HTMLDetailsElement>) => {
+        if (isMdScreen) {
+            event.currentTarget.removeAttribute("open");
+        }
+    };
+
+    return (
+        <>
+            <li>
+                <details
+                    className="relative text-lg"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <summary className="cursor-pointer">{t("业务")}</summary>
+                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                        <li><Link href="https://coolha.com" target='_blank'>coolha.com ↗</Link></li>
+                        <li><Link href="/about_us/#开发">{t("开发软件")}</Link></li>
+                        <li><Link href="/about_us/#市场">{t("市场研究")}</Link></li>
+                        <li><Link href="/about_us/#营销">{t("营销服务")}</Link></li>
+                        <li><Link href="/about_us/#策划">{t("策划方案")}</Link></li>
+                    </ul>
+                </details>
+            </li>
+
+            <li>
+                <details
+                    className="relative text-lg"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <summary className="cursor-pointer">{t("关于")}</summary>
+                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                        <li><Link href="/about_us">{t("关于我们")}</Link></li>
+                        <li><Link href="mailto:ceo@coolha.com">{t("加入我们")}</Link></li>
+                        <li><Link href="https://link3.to/coolha" target='_blank'>{t("联系我们")}</Link></li>
+                        <li><Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" target='_blank'>{t("博客")}↗</Link></li>
+                        <li><Link href="https://guild.xyz/coolha" target='_blank'>{t("公会")}↗</Link></li>
+                        <li><Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" target='_blank'>DAO↗</Link></li>
+                    </ul>
+                </details>
+            </li>
+
+            <li>
+                <details
+                    className="relative text-lg"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <summary className="cursor-pointer">{t("法律")}</summary>
+                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                        <li><Link href="/br">{t("品牌资产")}</Link></li>
+                        <li><Link href="/ipr">{t("知识产权")}</Link></li>
+                        <li><Link href="/privacy">{t("隐私策略")}</Link></li>
+                        <li><Link href="/terms">{t("使用条款")}</Link></li>
+                    </ul>
+                </details>
+            </li>
+        </>
+    );
 }

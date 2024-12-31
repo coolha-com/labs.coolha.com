@@ -26,18 +26,19 @@ export default function Footer() {
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('服务')}</h6>
-                        <Link href="/#开发" className="link link-hover">{t('开发软件')}</Link >
-                        <Link href="/#市场" className="link link-hover">{t('市场研究')}</Link >
-                        <Link href="/#营销" className="link link-hover">{t('营销服务')}</Link >
-                        <Link href="/#策划" className="link link-hover">{t('策划方案')}</Link >
+                        <Link href="/about_us/#开发" className="link link-hover">{t('开发软件')}</Link >
+                        <Link href="/about_us/#市场" className="link link-hover">{t('市场研究')}</Link >
+                        <Link href="/about_us/#营销" className="link link-hover">{t('营销服务')}</Link >
+                        <Link href="/about_us/#策划" className="link link-hover">{t('策划方案')}</Link >
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('关于')}</h6>
-                        <Link href="mailto:cs@coolha.com" className="link link-hover" target='_blank'>{t('联系我们')}</Link >
+                        <Link href="/about_us" className="link link-hover">{t('关于我们')}</Link >
                         <Link href="mailto:ceo@coolha.com" className="link link-hover" target='_blank'>{t('加入我们')}</Link >
-                        <Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" className="link link-hover">{t('博客')}↗</Link >
-                        <Link href="https://guild.xyz/coolha" className="link link-hover">{t('公会')}↗</Link >
-                        <Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" className="link link-hover">{t('DAO')}↗</Link >
+                        <Link href="https://link3.to/coolha" className="link link-hover" target='_blank'>{t('联系我们')}</Link >
+                        <Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" className="link link-hover" target='_blank'>{t('博客')}↗</Link >
+                        <Link href="https://guild.xyz/coolha" className="link link-hover" target='_blank'>{t('公会')}↗</Link >
+                        <Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" className="link link-hover" target='_blank'>{t('DAO')}↗</Link >
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('法律')}</h6>
