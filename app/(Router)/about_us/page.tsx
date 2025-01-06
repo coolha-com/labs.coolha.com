@@ -53,7 +53,7 @@ export default function page() {
     ]
     return (
         <div id='about' className="flex flex-col justify-center items-center">
-            <div className="bg-[base-100] py-24">
+            <div className="bg-[base-100] py-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
 
@@ -61,7 +61,7 @@ export default function page() {
                     <div className="mx-auto  lg:text-center">
 
                         <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">
-                            {t('让数据信息可拥有、可信任、有价值，构建')}
+                            {t('让数据信息可拥有、可信任、有价值')}
                         </p>
                         <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
                             {t('Coolha / 酷哈工作室')}

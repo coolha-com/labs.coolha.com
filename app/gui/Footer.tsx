@@ -12,20 +12,22 @@ export default function Footer() {
             <div className="flex justify-center ">
                 <footer className="footer  max-w-screen-xl p-6 lg:p-8  text-base-content">
                     <aside>
-                        <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className="max-w-32 " />
-                        <div className="place-self-center pt-8">
-                            <div className="grid grid-flow-col gap-4">
-                                <MediaLink />
-                            </div>
-                        </div>
+                        <Link href={`/`} className="">
+                            <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className="max-w-32 " />
+                            <p className=" text-center text-xl">Coolha</p>
+                        </Link>
                     </aside>
-
                     <nav>
-                        <h6 className="footer-title">{t('产品')}</h6>
-                        <Link href="https://coolha.com" className="link link-hover" target='_blank'>coolha.com↗</Link >
+                        <h6 className="footer-title">{t('媒体')}</h6>
+                        <div className="grid grid-flow-row grid-cols-3 gap-4 py-2">
+                            <MediaLink />
+                        </div>
+                        <Link href="https://guild.xyz/coolha" target='_blank'>{t("公会")}↗</Link>
+                        <Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" target='_blank'>DAO↗</Link>
                     </nav>
                     <nav>
-                        <h6 className="footer-title">{t('服务')}</h6>
+                        <h6 className="footer-title">{t('业务')}</h6>
+                        <Link href="https://coolha.com" className="link link-hover" target='_blank'>coolha.com↗</Link >
                         <Link href="/about_us/#开发" className="link link-hover">{t('开发软件')}</Link >
                         <Link href="/about_us/#市场" className="link link-hover">{t('市场研究')}</Link >
                         <Link href="/about_us/#营销" className="link link-hover">{t('营销服务')}</Link >
@@ -36,13 +38,13 @@ export default function Footer() {
                         <Link href="/about_us" className="link link-hover">{t('关于我们')}</Link >
                         <Link href="mailto:ceo@coolha.com" className="link link-hover" target='_blank'>{t('加入我们')}</Link >
                         <Link href="https://link3.to/coolha" className="link link-hover" target='_blank'>{t('联系我们')}</Link >
-                        <Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" className="link link-hover" target='_blank'>{t('博客')}↗</Link >
+                        {/* <Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" className="link link-hover" target='_blank'>{t('博客')}↗</Link >
                         <Link href="https://guild.xyz/coolha" className="link link-hover" target='_blank'>{t('公会')}↗</Link >
-                        <Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" className="link link-hover" target='_blank'>{t('DAO')}↗</Link >
+                        <Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" className="link link-hover" target='_blank'>{t('DAO')}↗</Link > */}
+                        <Link href="/br" className="link link-hover">{t('视觉设计')}</Link >
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('法律')}</h6>
-                        <Link href="/br" className="link link-hover">{t('品牌资产')}</Link >
                         <Link href="/ipr" className="link link-hover">{t('知识产权')}</Link >
                         <Link href="/privacy" className="link link-hover">{t('隐私策略')}</Link >
                         <Link href="/terms" className="link link-hover">{t('使用条款')}</Link >

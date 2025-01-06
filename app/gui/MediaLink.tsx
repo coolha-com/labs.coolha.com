@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
 import { FaCircleChevronLeft, FaDiscord, FaGithub, FaSquareXTwitter, FaTelegram, FaTiktok } from 'react-icons/fa6';
-import { RiMailFill, RiWechatFill, RiWeiboFill } from "react-icons/ri";
+import { RiBlueskyFill, RiLinkedinBoxFill, RiMailFill, RiWechatFill, RiWeiboFill } from "react-icons/ri";
 export default function MediaLink() {
   const [showImage, setShowImage] = useState(false);
 
@@ -56,11 +56,23 @@ export default function MediaLink() {
       </motion.div>
 
       <motion.div whileHover={{ scale: 1.2 }} >
+        <Link href="mailto:cs@coolha.com" target='_blank' >
+          <RiMailFill className="w-8 h-8" />
+        </Link >
+      </motion.div>
+
+      <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://x.com/coolha_com" target='_blank'>
           <FaSquareXTwitter className="w-8 h-8" />
         </Link>
       </motion.div>
 
+      <motion.div whileHover={{ scale: 1.2 }} >
+        <Link href="https://bsky.app/profile/coolha.com" target='_blank' >
+          <RiBlueskyFill className="w-8 h-8" />
+        </Link >
+      </motion.div>
+       
       <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://github.com/coolha-com" target='_blank' >
           <FaGithub className="w-8 h-8" />
@@ -68,16 +80,19 @@ export default function MediaLink() {
       </motion.div>
 
       <motion.div whileHover={{ scale: 1.2 }} >
-        <Link href="mailto:cs@coolha.com" target='_blank' >
-          <RiMailFill className="w-8 h-8" />
+        <Link href="https://www.linkedin.com/company/coolha/" target='_blank' >
+          <RiLinkedinBoxFill className="w-8 h-8" />
         </Link >
       </motion.div>
-{/* 
+
       <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://mirror.xyz/0xf3d7de68985ab5e92841ce7bc335cfe0c04cab4a" target='_blank' >
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="duration-300 shrink-0" ><path d="M5.5 10.5C5.5 6.91015 8.41015 4 12 4C15.5899 4 18.5 6.91015 18.5 10.5V20H5.5V10.5Z"></path></svg>
         </Link >
       </motion.div>
+
+{/* 
+
 
       <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://mirror.xyz/0xf3d7de68985ab5e92841ce7bc335cfe0c04cab4a" target='_blank' >
