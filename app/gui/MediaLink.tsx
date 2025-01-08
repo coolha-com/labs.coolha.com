@@ -68,6 +68,12 @@ export default function MediaLink() {
       </motion.div>
 
       <motion.div whileHover={{ scale: 1.2 }} >
+        <Link href="https://t.me/coolha_com" target='_blank'>
+          <FaTelegram className="w-8 h-8" />
+        </Link>
+      </motion.div>
+
+      <motion.div whileHover={{ scale: 1.2 }} >
         <Link href="https://bsky.app/profile/coolha.com" target='_blank' >
           <RiBlueskyFill className="w-8 h-8" />
         </Link >
