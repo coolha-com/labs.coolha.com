@@ -119,8 +119,9 @@ function LinkMenu() {
             <li>
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <summary className="cursor-pointer">{t("业务")}</summary>
-                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
                         <li><Link href="https://coolha.com" target='_blank'>coolha.com ↗</Link></li>
+                        <li><Link href="https://docs.coolha.com" target='_blank'>docs.coolha.com ↗</Link></li>
                         <li><Link href="/about_us/#开发">{t("开发软件")}</Link></li>
                         <li><Link href="/about_us/#市场">{t("市场研究")}</Link></li>
                         <li><Link href="/about_us/#营销">{t("营销服务")}</Link></li>
@@ -132,11 +133,9 @@ function LinkMenu() {
             <li>
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                     <summary className="cursor-pointer">{t("关于")}</summary>
-                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
                         <li><Link href="/about_us">{t("关于我们")}</Link></li>
                         <li><Link href="mailto:ceo@coolha.com">{t("加入我们")}</Link></li>
-                        <li><Link href="https://link3.to/coolha" target='_blank'>{t("联系我们")}</Link></li>
-                        <li><Link href="/br">{t("视觉设计")}</Link></li>
                     </ul>
                 </details>
             </li>
@@ -144,7 +143,7 @@ function LinkMenu() {
             <li>
                 <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <summary className="cursor-pointer">{t("法律")}</summary>
-                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
                         <li><Link href="/ipr">{t("知识产权")}</Link></li>
                         <li><Link href="/privacy">{t("隐私策略")}</Link></li>
                         <li><Link href="/terms">{t("使用条款")}</Link></li>
