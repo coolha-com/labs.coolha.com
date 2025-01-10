@@ -14,7 +14,6 @@ export default function Footer() {
                     <aside>
                         <Link href={`/`} className="">
                             <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className="max-w-32 " />
-                            <p className=" text-center text-xl">Coolha</p>
                         </Link>
                     </aside>
                     <nav>
@@ -28,11 +27,10 @@ export default function Footer() {
                     <nav>
                         <h6 className="footer-title">{t('业务')}</h6>
                         <Link href="https://coolha.com" className="link link-hover" target='_blank'>coolha.com↗</Link >
-                        <Link href="https://docs.coolha.com" className="link link-hover" target='_blank'>docs.coolha.com↗</Link >
-                        <Link href="/about_us/#开发" className="link link-hover">{t('开发软件')}</Link >
-                        <Link href="/about_us/#市场" className="link link-hover">{t('市场研究')}</Link >
-                        <Link href="/about_us/#营销" className="link link-hover">{t('营销服务')}</Link >
-                        <Link href="/about_us/#策划" className="link link-hover">{t('策划方案')}</Link >
+                        <Link href="https://docs.coolha.com" className="link link-hover" target='_blank'>Docs↗</Link >
+{/*                         <Link href="https://business.coolha.com" className="link link-hover" target='_blank'>Business↗</Link >
+                        <Link href="https://ads.coolha.com" className="link link-hover" target='_blank'>Ads↗</Link >
+                        <Link href="https://shop.coolha.com" className="link link-hover" target='_blank'>Shop↗</Link > */}
                     </nav>
                     <nav>
                         <h6 className="footer-title">{t('关于')}</h6>

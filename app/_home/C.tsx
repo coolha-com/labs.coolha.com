@@ -19,7 +19,7 @@ export default function Example() {
         <div className=" flex justify-evenly items-center md:flex-row flex-col  gap-8">
 
           <div id='coolha.com' className="card card-compact bg-base-100 shadow-xl border w-full max-w-96 h-auto mt-4">
-            <figure><img src='favicon.ico' alt='coolha' className=" w-full h-auto" /></figure>
+            <figure><img src='/logo/头像LOGO图.png' alt='coolha' className=" w-full h-auto" /></figure>
             <div className="card-body border-t ">
               <h2 className="card-title">coolha.com</h2>
               <p>{t('基于Lens协议开发的去中心化社交应用')}, {t('开发中仅测试用')}</p>

@@ -22,7 +22,7 @@ export default function Header() {
                 <div className="navbar-start">{/* 左 */}
                     <Link href={'/'} className="border-base-content">
                         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                            <Image src="/logo/头像LOGO图.png" alt="头像LOGO图.png" width={42} height={42} className=" rounded-full " />
+                            <Image src="/logo/透明LOGO绿色.png" alt="透明LOGO绿色.png" width={42} height={42} className=" rounded-full " />
                         </motion.div>
                     </Link>
                 </div>
@@ -121,11 +121,10 @@ function LinkMenu() {
                     <summary className="cursor-pointer">{t("业务")}</summary>
                     <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
                         <li><Link href="https://coolha.com" target='_blank'>coolha.com ↗</Link></li>
-                        <li><Link href="https://docs.coolha.com" target='_blank'>docs.coolha.com ↗</Link></li>
-                        <li><Link href="/about_us/#开发">{t("开发软件")}</Link></li>
-                        <li><Link href="/about_us/#市场">{t("市场研究")}</Link></li>
-                        <li><Link href="/about_us/#营销">{t("营销服务")}</Link></li>
-                        <li><Link href="/about_us/#策划">{t("策划方案")}</Link></li>
+                        <li><Link href="https://docs.coolha.com" target='_blank'>Docs ↗</Link></li>
+{/*                         <li><Link href="https://business.coolha.com" className="link link-hover" target='_blank'>Business↗</Link ></li>
+                        <li> <Link href="https://ads.coolha.com" className="link link-hover" target='_blank'>Ads↗</Link ></li>
+                        <li> <Link href="https://shop.coolha.com" className="link link-hover" target='_blank'>Shop↗</Link ></li> */}
                     </ul>
                 </details>
             </li>
