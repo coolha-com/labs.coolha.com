@@ -53,7 +53,7 @@ export default function page() {
     ]
     return (
         <div id='about' className="flex flex-col justify-center items-center">
-            <div className="bg-[base-100] py-24">
+            <div className="bg-[base-100] py-16">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
 
@@ -61,7 +61,7 @@ export default function page() {
                     <div className="mx-auto  lg:text-center">
 
                         <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">
-                            {t('让数据信息可拥有、可信任、有价值，构建')}
+                            {t('让数据信息可拥有、可信任、有价值')}
                         </p>
                         <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
                             {t('Coolha / 酷哈工作室')}
@@ -104,6 +104,9 @@ export default function page() {
                     </div>
 
                     {/* 业务 */}
+                    <p className="mt-24 text-3xl text-center font-bold tracking-tight  sm:text-4xl">
+                        {t('业务')}
+                    </p>
                     <div className="mx-auto  max-w-2xl  md:max-w-4xl md:grid grid-cols-2 gap-8 flex sm:flex-row flex-col pt-24">
                         <Cord logo={<RiCodeBoxLine />} name={t('开发')} text={t('DAPP、前端网站、EVM智能合约solidify、UI/UX设计、产品架构，区块链应用技术')} />
                         <Cord logo={<RiBarChart2Line />} name={t('市场')} text={t('市场研究报告,数据分析,技术研究文章等')} />

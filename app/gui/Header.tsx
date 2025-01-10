@@ -9,6 +9,7 @@ import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 import LocaleModal from "@/app/gui/LocaleSwap";
 import { useState, useEffect } from "react";
+import MediaLink from "./MediaLink";
 export default function Header() {
     const pathname = usePathname();
     const { theme, setTheme } = useTheme();
@@ -21,7 +22,7 @@ export default function Header() {
                 <div className="navbar-start">{/* 左 */}
                     <Link href={'/'} className="border-base-content">
                         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                            <Image src="/logo/头像LOGO图.png" alt="头像LOGO图.png" width={42} height={42} className=" rounded-full " />
+                            <Image src="/logo/透明LOGO绿色.png" alt="透明LOGO绿色.png" width={42} height={42} className=" rounded-full " />
                         </motion.div>
                     </Link>
                 </div>
@@ -101,35 +102,14 @@ function LinkMenu() {
 
     return (
         <>
-            <li>
-                <details
-                    className="relative text-lg"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    <summary className="cursor-pointer">{t("业务")}</summary>
-                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li><Link href="https://coolha.com" target='_blank'>coolha.com ↗</Link></li>
-                        <li><Link href="/about_us/#开发">{t("开发软件")}</Link></li>
-                        <li><Link href="/about_us/#市场">{t("市场研究")}</Link></li>
-                        <li><Link href="/about_us/#营销">{t("营销服务")}</Link></li>
-                        <li><Link href="/about_us/#策划">{t("策划方案")}</Link></li>
-                    </ul>
-                </details>
-            </li>
 
             <li>
-                <details
-                    className="relative text-lg"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
-                    <summary className="cursor-pointer">{t("关于")}</summary>
+                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+                    <summary className="cursor-pointer">{t("媒体")}</summary>
                     <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li><Link href="/about_us">{t("关于我们")}</Link></li>
-                        <li><Link href="mailto:ceo@coolha.com">{t("加入我们")}</Link></li>
-                        <li><Link href="https://link3.to/coolha" target='_blank'>{t("联系我们")}</Link></li>
-                        <li><Link href="https://mirror.xyz/0xF3D7De68985AB5e92841CE7bC335cFe0c04CAb4A" target='_blank'>{t("博客")}↗</Link></li>
+                        <div className="grid grid-flow-row grid-cols-3 gap-4 p-2">
+                            <MediaLink />
+                        </div>
                         <li><Link href="https://guild.xyz/coolha" target='_blank'>{t("公会")}↗</Link></li>
                         <li><Link href="https://snapshot.box/#/matic:0xD9d88a0e2E3a5f0A58859CEE46Ce8c3C514Ec9A1" target='_blank'>DAO↗</Link></li>
                     </ul>
@@ -137,20 +117,40 @@ function LinkMenu() {
             </li>
 
             <li>
-                <details
-                    className="relative text-lg"
-                    onMouseEnter={handleMouseEnter}
-                    onMouseLeave={handleMouseLeave}
-                >
+                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <summary className="cursor-pointer">{t("业务")}</summary>
+                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                        <li><Link href="https://coolha.com" target='_blank'>coolha.com ↗</Link></li>
+                        <li><Link href="https://docs.coolha.com" target='_blank'>Docs ↗</Link></li>
+{/*                         <li><Link href="https://business.coolha.com" className="link link-hover" target='_blank'>Business↗</Link ></li>
+                        <li> <Link href="https://ads.coolha.com" className="link link-hover" target='_blank'>Ads↗</Link ></li>
+                        <li> <Link href="https://shop.coolha.com" className="link link-hover" target='_blank'>Shop↗</Link ></li> */}
+                    </ul>
+                </details>
+            </li>
+
+            <li>
+                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
+                    <summary className="cursor-pointer">{t("关于")}</summary>
+                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
+                        <li><Link href="/about_us">{t("关于我们")}</Link></li>
+                        <li><Link href="mailto:ceo@coolha.com">{t("加入我们")}</Link></li>
+                    </ul>
+                </details>
+            </li>
+
+            <li>
+                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <summary className="cursor-pointer">{t("法律")}</summary>
-                    <ul className="w-52 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li><Link href="/br">{t("品牌资产")}</Link></li>
+                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
                         <li><Link href="/ipr">{t("知识产权")}</Link></li>
                         <li><Link href="/privacy">{t("隐私策略")}</Link></li>
                         <li><Link href="/terms">{t("使用条款")}</Link></li>
                     </ul>
                 </details>
             </li>
+
+
         </>
     );
 }
