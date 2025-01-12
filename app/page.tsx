@@ -27,13 +27,14 @@ export default function Home() {
               <Link
                 role="button"
                 className="btn btn-primary   hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full "
-                href={'https://coolha.comm'}
+                href={'https://coolha.com'}
                 target='_blank' >
                 {t('前往应用')} ↗
               </Link>
               <Link
                 role="button"
-                className="btn btn-primary   text-base-100 hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full" href={'https://docs.coolha.com'}>
+                className="btn btn-primary   text-base-100 hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full" href={'https://docs.coolha.com'}
+ target='_blank'>
                 {t('前往文档')} ↗
               </Link>
             </div>
