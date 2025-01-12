@@ -11,11 +11,11 @@ export default function Footer() {
 
             <div className="flex justify-center ">
                 <footer className="footer  max-w-screen-xl p-6 lg:p-8  text-base-content">
-                    <aside>
+{/*                     <aside>
                         <Link href={`/`} className="">
-                            <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className="max-w-32 " />
+                            <img src="/logo/透明LOGO白色.png" alt="/logo/透明LOGO白色.png" className="max-w-32 " />
                         </Link>
-                    </aside>
+                    </aside> */}
                     <nav>
                         <h6 className="footer-title">{t('媒体')}</h6>
                         <div className="grid grid-flow-row grid-cols-3 gap-4 py-2">
@@ -27,7 +27,7 @@ export default function Footer() {
                     <nav>
                         <h6 className="footer-title">{t('业务')}</h6>
                         <Link href="https://coolha.com" className="link link-hover" target='_blank'>coolha.com↗</Link >
-                        <Link href="https://docs.coolha.com" className="link link-hover" target='_blank'>Docs↗</Link >
+                        <Link href="https://docs.coolha.com" className="link link-hover" target='_blank'>docs.coolha.com↗</Link >
 {/*                         <Link href="https://business.coolha.com" className="link link-hover" target='_blank'>Business↗</Link >
                         <Link href="https://ads.coolha.com" className="link link-hover" target='_blank'>Ads↗</Link >
                         <Link href="https://shop.coolha.com" className="link link-hover" target='_blank'>Shop↗</Link > */}

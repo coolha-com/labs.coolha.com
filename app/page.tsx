@@ -1,9 +1,5 @@
 'use client'
 import Link from 'next/link';
-import Image from "next/image";
-import B from "./_home/B";
-import C from "./_home/C";
-import F from './_home/F';
 import { useTranslations } from 'next-intl';
 
 export default function Home() {
@@ -16,12 +12,15 @@ export default function Home() {
         <div className="hero-overlay bg-opacity-60"></div>
 
 
-        <div className=" flex justify-center items-center text-center  h-[calc(100vh-69px)] text-neutral-content  flex-col-reverse">
+        <div className=" flex flex-col justify-center items-center text-center  text-neutral-content h-[calc(100vh-69px)]  ">
+          
+          <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className=' image-full w-2/5 md:w-60  m-4' />
 
           <div className="max-w-4xl ">
             <h1 className="text-4xl md:text-7xl font-bold text-white">
               <span className="text-[#C0E218]">Coolha </span></h1>
-            <p className="p-2 mb-5 text-white text-xl md:text-2xl">{t('为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务')} </p>
+            <p className="p-2  text-white text-xl md:text-2xl">{t('为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务')} </p>
+            <p className='p-2 mb-5 text-xl text-white'>{t('基于Lens协议开发的去中心化社交应用')}</p>
 
 
             <div className='mt-5 self-center flex gap-2 w-full sm:w-auto flex-col sm:flex-row justify-center px-12'>
@@ -38,10 +37,8 @@ export default function Home() {
                 {t('前往文档')} ↗
               </Link>
             </div>
-
           </div>
 
-          <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className=' image-full w-2/5 md:w-60  m-4' />
 
         </div>
 
@@ -52,8 +49,8 @@ export default function Home() {
 
 
 
-      <B />
-      <C />
+      {/* <B /> */}
+      {/* <C /> */}
       {/* <F /> */}
 
 

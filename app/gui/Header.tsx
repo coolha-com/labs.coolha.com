@@ -121,7 +121,7 @@ function LinkMenu() {
                     <summary className="cursor-pointer">{t("业务")}</summary>
                     <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
                         <li><Link href="https://coolha.com" target='_blank'>coolha.com ↗</Link></li>
-                        <li><Link href="https://docs.coolha.com" target='_blank'>Docs ↗</Link></li>
+                        <li><Link href="https://docs.coolha.com" target='_blank'>docs.coolha.com ↗</Link></li>
 {/*                         <li><Link href="https://business.coolha.com" className="link link-hover" target='_blank'>Business↗</Link ></li>
                         <li> <Link href="https://ads.coolha.com" className="link link-hover" target='_blank'>Ads↗</Link ></li>
                         <li> <Link href="https://shop.coolha.com" className="link link-hover" target='_blank'>Shop↗</Link ></li> */}
