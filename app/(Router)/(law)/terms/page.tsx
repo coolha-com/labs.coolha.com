@@ -4,7 +4,7 @@ export default function page() {
     return (
         <div className="prose">
             <h1>使用条款</h1>
-            <p><b>酷哈工作室</b>（以下简称“我们”）依据本协议为用户（以下简称“你”）提供 <a href="https://about.coolha.com" target='_blank' className=" hover:link-hover text-primary">about.coolha.com</a>的服务。本协议对你和我们均具有法律约束力。</p>
+            <p><b>酷哈实验室</b>（以下简称“我们”）依据本协议为用户（以下简称“你”）提供 <a href="https://labs.coolha.com" target='_blank' className=" hover:link-hover text-primary">labs.coolha.com</a>的服务。本协议对你和我们均具有法律约束力。</p>
             <h4>一、本服务的功能</h4>
             <p>你可以使用本服务联系邮箱，外链网站。</p>
             <h4>二、责任范围及限制</h4>
