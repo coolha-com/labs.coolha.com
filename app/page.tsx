@@ -1,92 +1,170 @@
 'use client'
-import Link from 'next/link';
-import Image from "next/image";
-import B from "./_home/B";
-import C from "./_home/C";
-import F from './_home/F';
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import React from "react";
+import { FaBtc, FaEthereum, FaCommentsDollar, FaDonate } from "react-icons/fa";
+import { RiCodeBoxLine, RiBarChart2Line, RiLineChartLine, RiListCheck3, RiAdvertisementLine, RiApps2Line, RiFundsLine, RiNftLine } from "react-icons/ri";
 
-export default function Home() {
-  const t = useTranslations();
+export default function page() {
+    const t = useTranslations();
+    const Idea = [
+        {
+            name: t('使命'),
+            description: t('为推动互联网进步和世界文明进步，创造激动人心的产品服务，让世界变得更好'),
+            icon: FaBtc,
+        },
+        {
+            name: t('愿景'),
+            description: t('让数据信息可拥有、可信任、有价值'),
+            icon: FaEthereum,
+        },
+        {
+            name: t('价值观'),
+            description: t('始终以用户为核心，不希望利益化和过度金融化，所有权益公平'),
+            icon: FaCommentsDollar,
+        },
+        {
+            name: t('技术创新'),
+            description: t('致力于不断探索和应用前沿技术,提供更好的Web3产品和服务解决方案。'),
+            icon: FaDonate,
+        },
+    ]
+    const Case = [
+        {
+            name: t('数字营销方案'),
+            description: t('基于区块链技术发行数字资产，增强品牌忠诚度和创造独特价值，为用户和品牌建立更紧密的联系'),
+            icon: RiNftLine,
+        },
+        {
+            name: t('Web3应用场景落地'),
+            description: t('Dapp开发，链上智能合约开发，web3项目网站。结合业务场景需求，定制开发'),
+            icon: RiApps2Line,
+        },
+        {
+            name: t('曝光和增长'),
+            description: t('平台垂直广告，精准营销。为品牌调研和内容策划，增强消费者和粉丝粘性。'),
+            icon: RiAdvertisementLine,
+        },
+        {
+            name: t('品牌建设与推广'),
+            description: t('策划品牌活动，品牌推广策略，品牌形象设计'),
+            icon: RiFundsLine,
+        },
+    ]
+    return (
+        <div id='about' className="flex flex-col justify-center items-center py-20">
+            <div className="bg-[base-100] py-16">
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-  return (
-    <main className=''>
-
-      <div className=" max-h-[80vh] min-h-[100vh]  relative isolate overflow-hidden" style={{ backgroundImage: 'url(/repeated-square-dark.png)' }}>
-        <div className="hero-overlay bg-opacity-60"></div>
 
 
-        <div className=" flex justify-center items-center text-center  h-[calc(100vh-69px)] text-neutral-content  flex-col-reverse">
 
-          <div className="max-w-4xl ">
-            <h1 className="text-4xl md:text-7xl font-bold text-white">
-              <span className="text-[#C0E218]">Coolha </span></h1>
-            <p className="p-2 mb-5 text-white text-xl md:text-2xl">{t('为创作者、品牌、社区赋能，连接数字增长新动力，Web3世界的营销服务')} </p>
+                    {/* 介绍 */}
+                    <div className="mx-auto  lg:text-center">
+                        <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">
+                            {t('让数据信息可拥有、可信任、有价值')}
+                        </p>
+                        <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
+                            {t('Coolha / 酷哈实验室')}
+                            <br />
+                            {t('希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好')}
+                            <br />
+                            {t('相信Web3和区块链发展至今不仅仅是技术和互联网进步，更是一种能延伸到各领域的积极理念')}
+                            <br />
+                            {t('公共区块链是世界大同、世界人民大团结、民主治理、解决信任的一项重要技术。')}
+                        </p>
+                    </div>
+
+                    {/* 理念 */}
+                    <div className="mx-auto  max-w-2xl md:max-w-4xl mt-8">
+                        <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
+                            {Idea.map((idea) => (
+                                <div key={idea.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-base-200 hover:bg-[var(--navlink-color)] ">
+                                    <dt className=" text-2xl font-semibold leading-7 text-primary">
+                                        <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
+                                            <idea.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                                        </div>
+                                        {idea.name}
+                                    </dt>
+                                    <dd className="mt-2 text-xl leading-7 text-white">{idea.description}</dd>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className=" mt-14 flex justify-center ">
+                        <Link href={'mailto:ceo@coolha.com'} role="button" target='_blank' className="  btn btn-primary    text-xl  font-bold rounded-full ">
+                            {t('加入我们')} ↗
+                        </Link>
+                    </div>
 
 
-            <div className='mt-5 self-center flex gap-2 w-full sm:w-auto flex-col sm:flex-row justify-center px-12'>
-              <Link
-                role="button"
-                className="btn btn-primary   hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full "
-                href={'https://coolha.comm'}
-                target='_blank' >
-                {t('前往应用')} ↗
-              </Link>
-              <Link
-                role="button"
-                className="btn btn-primary   text-base-100 hover:text-[#3f1de7] text-xl md:text-2xl font-bold rounded-full" href={'https://docs.coolha.com'}>
-                {t('前往文档')} ↗
-              </Link>
+
+
+
+
+                    {/* 业务 */}
+                    <p className="mt-40 text-3xl text-center font-bold tracking-tight  sm:text-4xl">
+                        {t('业务')}
+                    </p>
+                    <div className="mx-auto  max-w-2xl  md:max-w-4xl md:grid grid-cols-2 gap-8 flex sm:flex-row flex-col mt-8">
+                        <Cord logo={<RiCodeBoxLine />} name={t('开发')} text={t('DAPP、前端网站、EVM智能合约solidify、UI/UX设计、产品架构，区块链应用技术')} />
+                        <Cord logo={<RiBarChart2Line />} name={t('市场')} text={t('市场研究报告,数据分析,技术研究文章等')} />
+                        <Cord logo={<RiLineChartLine />} name={t('营销')} text={t('广告流量,NFT营销方案等技术,为创作者和企业提供创收方案')} />
+                        <Cord logo={<RiListCheck3 />} name={t('策划')} text={t('Web3商业模式研究，为您提供市场研究、营销策划方案、内容创意、品牌策划、企业形象设计等')} />
+                    </div>
+
+                    {/* 案例 */}
+                    <div className="mx-auto max-w-2xl  md:max-w-4xl mt-8">
+                        <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-5 md:max-w-none md:grid-cols-2 lg:gap-y-8">
+                            {Case.map((cases) => (
+                                <div key={cases.name} className="relative pl-20 shadow-md p-6  rounded-2xl border bg-base-200 hover:bg-[var(--navlink-color)] ">
+                                    <dt className=" text-2xl font-semibold leading-7 text-primary">
+                                        <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
+                                            <cases.icon className="h-6 w-6 text-primary" aria-hidden="true" />
+                                        </div>
+                                        {cases.name}
+                                    </dt>
+                                    <dd className="mt-2 text-xl leading-7 text-white">{cases.description}</dd>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="mt-14 flex justify-center ">
+                        <Link href={'mailto:cs@coolha.com'} role="button" target='_blank' className="  btn btn-primary    text-xl  font-bold rounded-full "   >
+                            {t('联系我们')} ↗
+                        </Link>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                </div>
             </div>
-
-          </div>
-
-          <img src="/logo/透明LOGO绿色.png" alt="/logo/透明LOGO绿色.png" className=' image-full w-2/5 md:w-60  m-4' />
-
         </div>
-
-
-        <Absolute />
-      </div>
-
-
-
-
-      <B />
-      <C />
-      {/* <F /> */}
-
-
-    </main>
-  );
+    )
 }
 
-
-
-
-
-function Absolute() {
-  return (
-    <div>
-      <div className="absolute left-1/3 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-        <div
-          className="aspect-[1155/1000] w-[72.1875rem] bg-gradient-to-tr from-[#C0E218] to-[#3f1de7] opacity-30"
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
-
-      <div className="absolute left-2/3 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6" aria-hidden="true">
-        <div
-          className="aspect-[1155/1155] w-[72.1875rem] bg-gradient-to-tr from-[#C0E218] to-[#C0E218] opacity-10"
-          style={{
-            clipPath:
-              'polygon(14.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 87.5% 58.3%, 85.2% 14.5%, 27.5% 76.7%, 0.1% 14.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-        />
-      </div>
-    </div>
-  )
+function Cord({ logo, name, text, href }: any) {
+    const t = useTranslations();
+    return (
+        <div id={name} className="rounded-2xl relative  shadow-md bg-base-200 border h-auto p-6 pl-20 hover:bg-[var(--navlink-color)]">
+            <dt className=" text-2xl font-semibold leading-7 text-primary">
+                <div className="absolute left-5 top-7 flex h-10 w-10 items-start  rounded-2xl ">
+                    <div className="h-6 w-6 text-primary" aria-hidden="true" >{logo}</div>
+                </div>
+                {name}
+            </dt>
+            <dd className="mt-2 text-xl leading-7 text-white">{text}</dd>
+        </div>
+    )
 }
+
