@@ -10,6 +10,8 @@ import { useTranslations } from "next-intl";
 import LocaleModal from "@/app/gui/LocaleSwap";
 import { useState, useEffect } from "react";
 import MediaLink from "./MediaLink";
+
+
 export default function Header() {
     const pathname = usePathname();
     const { theme, setTheme } = useTheme();
@@ -36,31 +38,15 @@ export default function Header() {
                 </div>
 
                 {/* 按钮 */}
-                <div className="navbar-end">{/* 右 */}
+                <div className="navbar-end">
 
                     <LocaleModal />
-
-
-                    <div className="dropdown dropdown-end flex-row flex gap-2">
-                        <div className="dropdown dropdown-bottom dropdown-end">
-                            <label tabIndex={1} role="button" className="md:hidden btn  btn-square btn-ghost rounded-full ">
-                                <RiMenuFill className=" w-7 h-7 swap-off" />
-                            </label>
-
-                            <ul tabIndex={1} className="dropdown-content menu bg-base-100 rounded-box border gap-2 z-[1] min-w-72 max-w-96 p-2 shadow">
-                                <li><LinkNavbar href='/' Name={t('首页')} /></li>
-                                <LinkMenu />
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-
 
             </div>
         </div>
     )
 }
+
 function LinkNavbar({ href, Name }: any) {
     const pathname = usePathname();
     return (
@@ -72,66 +58,3 @@ function LinkNavbar({ href, Name }: any) {
 }
 
 
-function LinkMenu() {
-    const t = useTranslations();
-    const [isMdScreen, setIsMdScreen] = useState(false);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia("(min-width: 768px)");
-        const handleResize = () => setIsMdScreen(mediaQuery.matches);
-
-        // 初始化时检查屏幕大小
-        handleResize();
-
-        // 添加监听器
-        mediaQuery.addEventListener("change", handleResize);
-        return () => mediaQuery.removeEventListener("change", handleResize);
-    }, []);
-
-    const handleMouseEnter = (event: React.MouseEvent<HTMLDetailsElement>) => {
-        if (isMdScreen) {
-            event.currentTarget.setAttribute("open", "true");
-        }
-    };
-
-    const handleMouseLeave = (event: React.MouseEvent<HTMLDetailsElement>) => {
-        if (isMdScreen) {
-            event.currentTarget.removeAttribute("open");
-        }
-    };
-
-    return (
-        <>
-
-
-
-            <li>
-                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <summary className="cursor-pointer">{t("业务")}</summary>
-                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        <li><Link href="https://coolha.com" target='_blank'>coolha.com ↗</Link></li>
-                        <li><Link href="https://docs.coolha.com" target='_blank'>docs.coolha.com ↗</Link></li>
-                        {/*                         <li><Link href="https://business.coolha.com" className="link link-hover" target='_blank'>Business↗</Link ></li>
-                        <li> <Link href="https://ads.coolha.com" className="link link-hover" target='_blank'>Ads↗</Link ></li>
-                        <li> <Link href="https://shop.coolha.com" className="link link-hover" target='_blank'>Shop↗</Link ></li> */}
-                    </ul>
-                </details>
-            </li>
-
-            <li>
-                <details className="relative text-lg" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
-                    <summary className="cursor-pointer">{t("关于")}</summary>
-                    <ul className="w-56 bg-base-100 md:absolute md:top-7 md:left-0 md:border md:rounded-2xl md:shadow-lg md:z-10">
-                        {/*   <li><Link href="/about_us">{t("关于我们")}</Link></li> */}
-                        <li><Link href="mailto:ceo@coolha.com">{t("加入我们")}</Link></li>
-                        <li><Link href="mailto:cs@coolha.com" >{t('联系我们')}</Link ></li>
-                    </ul>
-                </details>
-            </li>
-
-
-
-
-        </>
-    );
-}
