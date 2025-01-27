@@ -15,7 +15,7 @@ export default function Header() {
     const { theme, setTheme } = useTheme();
     const t = useTranslations();
     return (
-        <div className="min-w-80 w-screen bg-base-200 justify-around  z-50  flex  fixed top-0 left-0 right-0 transition-transform duration-300 px-2">
+        <div className="min-w-80  bg-base-200 justify-around  z-50  flex  left-0 right-0 transition-transform duration-300 px-2">
             <div className="navbar bg-base-200  max-w-screen-xl mx-auto  ">
 
 
@@ -29,10 +29,10 @@ export default function Header() {
 
                 {/* 手机隐藏navbar-center */}
                 <div className="navbar-center hidden md:flex">{/* 中 */}
-                    <ul className="menu menu-horizontal px-1 gap-4">
+{/*                     <ul className="menu menu-horizontal px-1 gap-4">
                         <li><LinkNavbar href='/' Name={t('首页')} /></li>
                         <LinkMenu />
-                    </ul>
+                    </ul> */}
                 </div>
 
                 {/* 按钮 */}
@@ -41,7 +41,7 @@ export default function Header() {
                     <LocaleModal />
 
 
-                    <div className="dropdown dropdown-end flex-row flex gap-2">
+{/*                     <div className="dropdown dropdown-end flex-row flex gap-2">
                         <div className="dropdown dropdown-bottom dropdown-end">
                             <label tabIndex={1} role="button" className="md:hidden btn  btn-square btn-ghost rounded-full ">
                                 <RiMenuFill className=" w-7 h-7 swap-off" />
@@ -52,7 +52,7 @@ export default function Header() {
                                 <LinkMenu />
                             </ul>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
 
