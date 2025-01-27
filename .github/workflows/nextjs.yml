@@ -1,4 +1,4 @@
-name: Deploy Next.js site to GitHub Pages
+name: Deploy Next.js site to Pages
 
 on:
   push:
@@ -37,16 +37,20 @@ jobs:
           # 配置 Git
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # 切换到 gh-pages 分支
-          git fetch origin gh-pages
+
+          # 检出 gh-pages 分支或创建一个新分支
+          git fetch origin gh-pages || true
           git switch gh-pages || git checkout --orphan gh-pages
-          
-          # 清空 gh-pages 分支并复制构建结果
-          git rm -rf .
-          cp -r ./out/* .
-          
-          # 添加所有文件并推送到远程 gh-pages 分支
+
+          # 删除所有文件，保留 .git 文件夹
+          find . -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+
+          # 将 out 文件夹内容复制到根目录
+          cp -r out/* .
+
+          # 添加所有文件并提交更改
           git add .
           git commit -m "Deploy from main branch"
+
+          # 推送到远程 gh-pages 分支
           git push origin gh-pages --force
