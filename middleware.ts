@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from 'next/server'
 const I18nMiddleware = createI18nMiddleware({
   locales: ['zh', 'en'],
   defaultLocale: 'zh',
- // urlMappingStrategy: 'rewrite',
+  urlMappingStrategy: 'rewrite',
 })
 
 export function middleware(request: NextRequest) {
