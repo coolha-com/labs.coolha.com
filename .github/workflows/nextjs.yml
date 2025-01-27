@@ -42,8 +42,11 @@ jobs:
           git fetch origin gh-pages || true
           git switch gh-pages || git checkout --orphan gh-pages
 
-          # 将 out 文件夹内容复制到根目录
-          cp -r out/* .
+          # 删除所有文件，保留 .git 目录
+          find . -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+
+          # 使用 rsync 只复制 out 文件夹中的内容
+          rsync -av --delete out/ ./
 
           # 添加所有文件并提交更改
           git add .
