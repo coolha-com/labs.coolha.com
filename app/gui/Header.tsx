@@ -2,19 +2,13 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ThemeSwap from "./ThemeSwap";
-import { RiCloseLargeFill, RiMenuFill, RiMoonLine, RiSunLine, RiTranslate } from "react-icons/ri";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useTranslations } from "next-intl";
 import LocaleModal from "@/app/gui/LocaleSwap";
-import { useState, useEffect } from "react";
-import MediaLink from "./MediaLink";
 
 
 export default function Header() {
-    const pathname = usePathname();
-    const { theme, setTheme } = useTheme();
     const t = useTranslations();
     return (
         <div className="min-w-80  bg-base-200 justify-around  z-50  flex  left-0 right-0 transition-transform duration-300 px-2">
