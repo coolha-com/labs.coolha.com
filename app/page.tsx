@@ -61,11 +61,13 @@ export default function page() {
 
                     {/* 介绍 */}
                     <div className="mx-auto  lg:text-center">
+                        <p className="mt-2 text-3xl text-primary font-bold tracking-tight  sm:text-5xl">
+                            {t('酷哈实验室')}
+                        </p>
                         <p className="mt-2 text-3xl font-bold tracking-tight  sm:text-4xl">
                             {t('让数据信息可拥有、可信任、有价值')}
                         </p>
                         <p className="mt-6 text-xl leading-8 text-[#6a6a6a]">
-                            {t('Coolha / 酷哈实验室')}
                             <br />
                             {t('希望通过技术改变生产关系，为世界文明进步做贡献，让世界变得更好')}
                             <br />
