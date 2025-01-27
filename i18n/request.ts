@@ -1,4 +1,4 @@
-import { getRequestConfig } from 'next-intl/server';
+/* import { getRequestConfig } from 'next-intl/server';
 import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { headers, cookies } from 'next/headers';
@@ -26,3 +26,4 @@ export default getRequestConfig(async () => {
     messages: (await import(`./${locale}.json`)).default,
   };
 });
+ */

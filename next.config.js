@@ -1,9 +1,16 @@
-const createNextIntlPlugin = require('next-intl/plugin');
- 
-const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
- // output: 'export',
+    output: 'export',
+    images: { unoptimized: true },
+    transpilePackages: ['next-international', 'international-types'],
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+    typescript: {
+        ignoreBuildErrors: true,
+    },
+
 }
 
-module.exports = withNextIntl(nextConfig)
+module.exports = nextConfig

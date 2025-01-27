@@ -7,13 +7,13 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "serve": "serve@latest out",
+    "serve": "next serve@latest out",
     "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^11.0.6",
     "next": "^14.2.13",
-    "next-intl": "^3.20.0",
+    "next-international": "^1.3.1",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
